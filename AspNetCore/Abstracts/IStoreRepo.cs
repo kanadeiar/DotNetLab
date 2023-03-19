@@ -1,6 +1,6 @@
 namespace AspNetCore.Abstracts;
 
-public interface IStoreRepository
+public interface IStoreRepo
 {
     IQueryable<Product> Products { get; }
 }

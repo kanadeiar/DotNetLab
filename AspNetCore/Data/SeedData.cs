@@ -54,6 +54,18 @@ public static class SeedData
                     Description = "Фигурка для установки на игровую доску",
                     Category = "Шахматы",
                     Price = 99,
+                },
+                new Product {
+                    Name = "Фигурка ладьи",
+                    Description = "Ладья.",
+                    Category = "Шахматы",
+                    Price = 999,
+                },
+                new Product {
+                    Name = "Фигурка коня",
+                    Description = "Конь ходит буквой гэ",
+                    Category = "Шахматы",
+                    Price = 99.9m,
                 }
             );
         }

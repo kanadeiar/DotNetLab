@@ -1,9 +1,9 @@
 namespace AspNetCore.Data;
 
-public class StoreRepository : IStoreRepository
+public class StoreRepo : IStoreRepo
 {
     private readonly AspNetCoreDbContext _context;
-    public StoreRepository(AspNetCoreDbContext context)
+    public StoreRepo(AspNetCoreDbContext context)
     {
         _context = context;
     }
