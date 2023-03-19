@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore", "AspNetCore\AspNetCore.csproj", "{90F135F8-2B21-4AD5-9700-CF6C179D7644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewConsole", "PreviewConsole\PreviewConsole.csproj", "{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{90F135F8-2B21-4AD5-9700-CF6C179D7644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90F135F8-2B21-4AD5-9700-CF6C179D7644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90F135F8-2B21-4AD5-9700-CF6C179D7644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
