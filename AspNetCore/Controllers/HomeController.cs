@@ -1,5 +1,3 @@
-using AspNetCore.ViewModels;
-
 namespace AspNetCore.Controllers;
 
 public class HomeController : Controller
@@ -10,18 +8,20 @@ public class HomeController : Controller
     {
         _repository = repository;
     }
-    public IActionResult Index(int productPage = 1) 
+    public IActionResult Index(string? category, int productPage = 1) 
     {
+        var products = _repository.Products
+            .Where(x => category == null || x.Category == category)
+            .OrderBy(x => x.Id);
         var model = new ProductsListViewModel
         {
-            Products = _repository.Products
-                .OrderBy(x => x.Id)
+            Products = products
                 .Skip((productPage - 1) * PageSize)
-                .Take(PageSize),
+                .Take(PageSize).ToArray(),
             PagingInfo = new PagingInfo {
                 CurrentPage = productPage,
                 ItemsPerPage = PageSize,
-                TotalCount = _repository.Products.Count(),
+                TotalCount = products.Count(),
             }
         };
         return View(model);

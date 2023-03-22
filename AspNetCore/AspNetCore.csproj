@@ -11,6 +11,11 @@
     <Using Include="Microsoft.AspNetCore.Mvc" />
     <Using Include="System.Diagnostics" />  
     <Using Include="Microsoft.EntityFrameworkCore" />
+    <Using Include="Microsoft.AspNetCore.Mvc.Rendering" />
+    <Using Include="Microsoft.AspNetCore.Mvc.Routing" />
+    <Using Include="Microsoft.AspNetCore.Mvc.ViewFeatures" />
+    <Using Include="Microsoft.AspNetCore.Razor.TagHelpers" />
+    <Using Include="Microsoft.AspNetCore.Mvc" />
   </ItemGroup>
 
   <ItemGroup>
