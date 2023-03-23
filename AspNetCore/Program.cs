@@ -5,23 +5,27 @@ builder.Services.AddDbContext<AspNetCoreDbContext>(options => {
 });
 builder.Services.AddScoped<IStoreRepo, StoreRepo>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
 app.UseDeveloperExceptionPage();
 app.UseStatusCodePages();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
-app.MapControllerRoute("catpage", "{category}/Page{productPage:int}", 
-    new { Controller = "Home", Action = "Index" });
-app.MapControllerRoute("page", "Page{productPage:int}",
-    new { Controller = "Home", Action = "Index", productPage = 1 });
-app.MapControllerRoute("category", "{category}",
-    new { Controller = "Home", Action = "Index", productPage = 1 });
-app.MapControllerRoute("pagination", "Products/Page{productPage:int}", 
-    new { Controller = "Home", Action = "Index", productPage = 1 });
+// app.MapControllerRoute("catpage", "{category}/Page{productPage:int}", 
+//     new { Controller = "Home", Action = "Index" });
+// app.MapControllerRoute("page", "Page{productPage:int}",
+//     new { Controller = "Home", Action = "Index", productPage = 1 });
+// app.MapControllerRoute("category", "{category}",
+//     new { Controller = "Home", Action = "Index", productPage = 1 });
+// app.MapControllerRoute("pagination", "Products/Page{productPage:int}", 
+//     new { Controller = "Home", Action = "Index", productPage = 1 });
 app.MapDefaultControllerRoute();
+app.MapRazorPages();
 
 SeedData.EnsurePopulated(app);
 
