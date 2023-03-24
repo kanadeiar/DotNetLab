@@ -3,17 +3,18 @@ namespace AspNetCore.Controllers;
 public class CartController : Controller
 {
     private readonly IStoreRepo _repo;
-    public CartController(IStoreRepo repo)
+    private readonly Cart _cart;
+    public CartController(IStoreRepo repo, Cart cart)
     {
         _repo = repo;
+        _cart = cart;
     }
     public IActionResult Index(string? returnUrl)
     {
-        var cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
         var model = new CartViewModel
         {
-            Cart = cart,
-            ReturnUrl = returnUrl,
+            Cart = _cart,
+            ReturnUrl = returnUrl ?? "/",
         };
         return View(model);
     }
@@ -23,9 +24,17 @@ public class CartController : Controller
         var product = _repo.Products.FirstOrDefault(x => x.Id == id);
         if (product is { })
         {
-            var cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
-            cart.AddItem(product, 1);
-            HttpContext.Session.SetJson("cart", cart);
+            _cart.AddItem(product, 1);
+        }
+        return RedirectToAction("Index", "Cart", new { returnUrl = returnUrl });
+    }
+    [HttpPost]
+    public IActionResult Remove(int id, string? returnUrl)
+    {
+        var product = _repo.Products.FirstOrDefault(x => x.Id == id);
+        if (product is { })
+        {
+            _cart.RemoveLine(product);
         }
         return RedirectToAction("Index", "Cart", new { returnUrl = returnUrl });
     }
