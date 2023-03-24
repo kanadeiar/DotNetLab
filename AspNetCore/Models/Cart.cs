@@ -2,11 +2,7 @@ namespace AspNetCore.Models;
 
 public class Cart
 {
-    public List<CartLine> Lines { get; } = new List<CartLine>();
-    public Cart()
-    {
-        
-    }
+    public List<CartLine> Lines { get; set; } = new List<CartLine>();
     public void AddItem(Product product, int quantity)
     {
         var line = Lines.Where(x => x.Product?.Id == product.Id).FirstOrDefault();
