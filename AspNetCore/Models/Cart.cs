@@ -8,7 +8,7 @@ public class Cart
         var line = Lines.Where(x => x.Product?.Id == product.Id).FirstOrDefault();
         if (line == null)
         {
-            Lines.Add(new CartLine { Id = product.Id, Product = product, Quantity = quantity });
+            Lines.Add(new CartLine { Product = product, Quantity = quantity });
         }
         else
         {

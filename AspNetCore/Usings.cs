@@ -5,3 +5,5 @@ global using AspNetCore.ViewModels;
 global using AspNetCore.Infra;
 global using System.Text.Json;
 global using System.Text.Json.Serialization;
+global using Microsoft.AspNetCore.Mvc.ModelBinding;
+global using System.ComponentModel.DataAnnotations;
