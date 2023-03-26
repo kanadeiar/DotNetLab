@@ -20,4 +20,6 @@ public class Order
     public string? Country { get; set; }
     public string? Zip { get; set; }
     public bool GiftWrap { get; set; }
+    [BindNever]
+    public bool IsShipped { get; set; }
 }
