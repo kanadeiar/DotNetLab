@@ -1,6 +1,6 @@
 namespace AspNetCore.Data;
 
-public class AspNetCoreDbContext : DbContext
+public class AspNetCoreDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Order> Orders => Set<Order>();

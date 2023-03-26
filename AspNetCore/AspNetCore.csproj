@@ -16,9 +16,16 @@
     <Using Include="Microsoft.AspNetCore.Mvc.ViewFeatures" />
     <Using Include="Microsoft.AspNetCore.Razor.TagHelpers" />
     <Using Include="Microsoft.AspNetCore.Mvc" />
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.Json.Serialization" />
+    <Using Include="Microsoft.AspNetCore.Mvc.ModelBinding" />
+    <Using Include="System.ComponentModel.DataAnnotations" />
+    <Using Include="Microsoft.AspNetCore.Identity" />
+    <Using Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

@@ -2,17 +2,29 @@ namespace AspNetCore.Data;
 
 public static class SeedData
 {
-    public static void EnsurePopulated(IApplicationBuilder app)
+    private const string adminUser = "admin";
+    private const string adminPassword = "Secret123$";
+    public static async void EnsurePopulated(IApplicationBuilder app)
     {
         var context = app.ApplicationServices.CreateScope().ServiceProvider
             .GetRequiredService<AspNetCoreDbContext>();
         if (context.Database.GetPendingMigrations().Any())
         {
-            context.Database.Migrate();
+            await context.Database.MigrateAsync();
+        }
+        var userManager = app.ApplicationServices.CreateScope().ServiceProvider
+            .GetRequiredService<UserManager<IdentityUser>>();
+        var user = await userManager.FindByIdAsync(adminUser);
+        if (user is null)
+        {
+            user = new IdentityUser(adminUser);
+            user.Email = "admin@example.com";
+            user.PhoneNumber = "444-4444";
+            await userManager.CreateAsync(user, adminPassword);
         }
         if (!context.Products.Any())
         {
-            context.Products.AddRange(
+            await context.Products.AddRangeAsync(
                 new Product {
                     Name = "Шорты",
                     Description = "Обычные спортивные шорты",
@@ -69,6 +81,6 @@ public static class SeedData
                 }
             );
         }
-        context.SaveChanges();
+        await context.SaveChangesAsync();
     }
 }

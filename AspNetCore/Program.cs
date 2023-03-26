@@ -13,15 +13,27 @@ builder.WebHost.ConfigureServices(x => {
     x.AddScoped<Cart>(x => SessionCart.GetCart(x));
     x.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
     x.AddServerSideBlazor();
+    x.AddIdentity<IdentityUser, IdentityRole>()
+        .AddEntityFrameworkStores<AspNetCoreDbContext>();
 });
 
 var app = builder.Build();
 
-app.UseDeveloperExceptionPage();
-app.UseStatusCodePages();
+if (app.Environment.IsProduction())
+{
+    app.UseExceptionHandler("/error");
+}
+else
+{
+    app.UseDeveloperExceptionPage();
+    app.UseStatusCodePages();
+}
+
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapDefaultControllerRoute();
 app.MapRazorPages();
 app.MapBlazorHub();
