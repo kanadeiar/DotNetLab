@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Brand>
+
+<h4>Все бренды</h4>
+
+@foreach (var b in Model)
+{
+    <div>
+        <h6>@b.Name</h6>
+        <p>@b.Detail</p>
+    </div>
+}
