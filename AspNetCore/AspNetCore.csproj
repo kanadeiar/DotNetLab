@@ -34,4 +34,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCoreRazor\AspNetCoreRazor.csproj" />
+  </ItemGroup>
+
 </Project>
