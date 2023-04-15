@@ -3,19 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore", "AspNetCore\AspNetCore.csproj", "{90F135F8-2B21-4AD5-9700-CF6C179D7644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore", "AspNetCore\AspNetCore.csproj", "{90F135F8-2B21-4AD5-9700-CF6C179D7644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewConsole", "PreviewConsole\PreviewConsole.csproj", "{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreviewConsole", "PreviewConsole\PreviewConsole.csproj", "{8FB42EAD-68F6-4B4D-A6A7-EED87BAF50A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Tests", "AspNetCore.Tests\AspNetCore.Tests.csproj", "{9737A9F1-DB3F-46D7-BBF8-A405C1E104DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Tests", "AspNetCore.Tests\AspNetCore.Tests.csproj", "{9737A9F1-DB3F-46D7-BBF8-A405C1E104DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreRazor", "AspNetCoreRazor\AspNetCoreRazor.csproj", "{11B27E2F-8E6C-429F-B9CB-1EC22A373254}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{90F135F8-2B21-4AD5-9700-CF6C179D7644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +29,12 @@ Global
 		{9737A9F1-DB3F-46D7-BBF8-A405C1E104DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9737A9F1-DB3F-46D7-BBF8-A405C1E104DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9737A9F1-DB3F-46D7-BBF8-A405C1E104DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B27E2F-8E6C-429F-B9CB-1EC22A373254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B27E2F-8E6C-429F-B9CB-1EC22A373254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B27E2F-8E6C-429F-B9CB-1EC22A373254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B27E2F-8E6C-429F-B9CB-1EC22A373254}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
