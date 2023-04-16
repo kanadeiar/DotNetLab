@@ -1,8 +1,11 @@
+using KndStore.Catalog;
+using KndStore.Catalog.Extensions;
 using KndStore.Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().RegisterModules();
+builder.Services.AddCatalogModule(builder.Configuration);
 
 var app = builder.Build();
 
@@ -14,8 +17,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapDefaultControllerRoute();
+
+CatalogSeedData.EnsurePopulated(app);
 
 app.Run();

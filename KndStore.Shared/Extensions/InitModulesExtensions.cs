@@ -2,7 +2,7 @@
 using KndStore.Shared.Abstracts;
 
 namespace KndStore.Shared.Extensions;
-public static class ConfigExtensions
+public static class InitModulesExtensions
 {
     static readonly List<IModule> _registeredModules = new List<IModule>();
 

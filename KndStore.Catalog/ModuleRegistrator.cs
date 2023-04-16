@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace KndStore.Catalog;
 
-public class Registrator : IModule
+public class ModuleRegistrator : IModule
 {
     public IMvcBuilder RegisterModule(IMvcBuilder builder)
     {
