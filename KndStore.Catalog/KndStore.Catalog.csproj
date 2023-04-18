@@ -22,6 +22,14 @@
     <Folder Include="Views\Shared\Partial\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Shared\Components\NavigationMenu\Default.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\Components\NavigationMenu\Default.cshtml" />
+  </ItemGroup>
+
 
 
 </Project>

@@ -15,9 +15,14 @@ public class CatalogController : Controller
         _repo = repo;
     }
 
-    public async Task<IActionResult> Index(int productPage = 1)
+    public async Task<IActionResult> Index(string? category, int productPage = 1)
     {
-        var products = await _repo.Query.OrderBy(x => x.Id).Skip((productPage - 1) * PageSize).Take(PageSize).ToArrayAsync();
+        var query = _repo.Query
+            .Where(x => category == null || x.Category == category)
+            .OrderBy(x => x.Id);
+        var products = await query
+            .Skip((productPage - 1) * PageSize)
+            .Take(PageSize).ToArrayAsync();
         var model = new CatalogListViewModel
         {
             Products = products,
@@ -25,8 +30,9 @@ public class CatalogController : Controller
             {
                 CurrentPage = productPage,
                 ItemsPerPage = PageSize,
-                TotalCount = _repo.Query.Count(),
+                TotalCount = query.Count(),
             },
+            CurrentCategory = category,
         };
         return View(model);
     }

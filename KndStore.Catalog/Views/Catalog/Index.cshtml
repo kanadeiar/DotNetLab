@@ -1,7 +1,7 @@
 @model CatalogListViewModel
 
 <div id="categories" class="col-3">
-    later
+    <vc:navigation-menu category="@Model.CurrentCategory" />
 </div>
 
 <div class="col-9">
@@ -17,6 +17,7 @@
 
     <div page-model="@Model.PagingInfo" page-action="Index" class="btn-group m-1"
          page-classes-enabled="true"
-         page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"></div>
+         page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"
+         page-url-category="@Model.CurrentCategory"></div>
 </div>
 
