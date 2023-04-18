@@ -1,16 +1,22 @@
 @model CatalogListViewModel
 
-<h4>Каталог товаров интернет-магазина товаров</h4>
+<div id="categories" class="col-3">
+    later
+</div>
 
-<a asp-controller="Home" asp-action="Index">Обратно</a>
+<div class="col-9">
+    <h4>Каталог товаров интернет-магазина товаров</h4>
 
-@foreach (var product in Model.Products)
-{
-    <div>
-        <h3>@product.Name</h3>
-        @product.Description
-        <h4>@product.Price.ToString("c")</h4>
-    </div>
-}
+    <a asp-controller="Home" asp-action="Index"
+       class="btn btn-outline-secondary mb-2">Обратно</a>
 
-<div page-model="@Model.PagingInfo" page-action="Index"></div>
+    @foreach (var product in Model.Products)
+    {
+        <partial name="Partial/ProductCardPartial" model="product"/>
+    }
+
+    <div page-model="@Model.PagingInfo" page-action="Index" class="btn-group m-1"
+         page-classes-enabled="true"
+         page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"></div>
+</div>
+
