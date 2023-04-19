@@ -5,6 +5,7 @@ using KndStore.Shared.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().RegisterModules();
+builder.Services.AddRazorPages();
 builder.Services.AddCatalogModule(builder.Configuration);
 
 var app = builder.Build();
@@ -18,6 +19,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.MapDefaultControllerRoute();
+app.MapRazorPages();
 
 CatalogSeedData.EnsurePopulated(app);
 

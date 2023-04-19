@@ -15,10 +15,6 @@
     <ProjectReference Include="..\KndStore.Shared.Infra\KndStore.Shared.Infra.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Infra\" />
-  </ItemGroup>
-
 
 
 </Project>
