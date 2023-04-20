@@ -3,25 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore", "KndStore\KndStore.csproj", "{341C88C5-B92A-43DE-AAB9-D62047EC607D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore", "KndStore\KndStore.csproj", "{341C88C5-B92A-43DE-AAB9-D62047EC607D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{56DE52BF-B3D6-4254-B072-47DA77812E8F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Host", "_Host", "{E7EEDC07-5445-4772-8E09-59B981EADF77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Catalog", "KndStore.Catalog\KndStore.Catalog.csproj", "{82E362B8-382E-4C7C-AD82-4C632F5CED03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Catalog", "KndStore.Catalog\KndStore.Catalog.csproj", "{82E362B8-382E-4C7C-AD82-4C632F5CED03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Catalog.Core", "KndStore.Catalog.Core\KndStore.Catalog.Core.csproj", "{C725D481-7469-4A31-B3B3-A5B57CDBD2C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Catalog.Core", "KndStore.Catalog.Core\KndStore.Catalog.Core.csproj", "{C725D481-7469-4A31-B3B3-A5B57CDBD2C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Catalog.Infra", "KndStore.Catalog.Infra\KndStore.Catalog.Infra.csproj", "{8EB597DB-0D06-4782-BDA0-A2E1CC794B85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Catalog.Infra", "KndStore.Catalog.Infra\KndStore.Catalog.Infra.csproj", "{8EB597DB-0D06-4782-BDA0-A2E1CC794B85}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A208BEC9-2098-46AF-AA02-CB9A7EB2F91E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Shared", "KndStore.Shared\KndStore.Shared.csproj", "{3C2E5CE6-DFC5-414E-BFCF-CBB360777541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Shared", "KndStore.Shared\KndStore.Shared.csproj", "{3C2E5CE6-DFC5-414E-BFCF-CBB360777541}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Shared.Core", "KndStore.Shared.Core\KndStore.Shared.Core.csproj", "{1270C2B5-7AD3-4E85-A228-D92DAB9EF707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Shared.Core", "KndStore.Shared.Core\KndStore.Shared.Core.csproj", "{1270C2B5-7AD3-4E85-A228-D92DAB9EF707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Shared.Infra", "KndStore.Shared.Infra\KndStore.Shared.Infra.csproj", "{DB769850-56EC-4F15-A17E-D21C9D73E9A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Shared.Infra", "KndStore.Shared.Infra\KndStore.Shared.Infra.csproj", "{DB769850-56EC-4F15-A17E-D21C9D73E9A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cart", "Cart", "{C8A9D0B2-35E3-46C4-9921-B95CB284943E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Cart", "KndStore.Cart\KndStore.Cart.csproj", "{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Cart.Core", "KndStore.Cart.Core\KndStore.Cart.Core.csproj", "{5525307D-6E42-42DD-A91C-C2CDF439EBF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KndStore.Cart.Infra", "KndStore.Cart.Infra\KndStore.Cart.Infra.csproj", "{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +65,18 @@ Global
 		{DB769850-56EC-4F15-A17E-D21C9D73E9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB769850-56EC-4F15-A17E-D21C9D73E9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB769850-56EC-4F15-A17E-D21C9D73E9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5525307D-6E42-42DD-A91C-C2CDF439EBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5525307D-6E42-42DD-A91C-C2CDF439EBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5525307D-6E42-42DD-A91C-C2CDF439EBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5525307D-6E42-42DD-A91C-C2CDF439EBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +89,9 @@ Global
 		{3C2E5CE6-DFC5-414E-BFCF-CBB360777541} = {A208BEC9-2098-46AF-AA02-CB9A7EB2F91E}
 		{1270C2B5-7AD3-4E85-A228-D92DAB9EF707} = {A208BEC9-2098-46AF-AA02-CB9A7EB2F91E}
 		{DB769850-56EC-4F15-A17E-D21C9D73E9A4} = {A208BEC9-2098-46AF-AA02-CB9A7EB2F91E}
+		{8EBEA538-DAF2-46C3-B3F5-96179EFD652D} = {C8A9D0B2-35E3-46C4-9921-B95CB284943E}
+		{5525307D-6E42-42DD-A91C-C2CDF439EBF9} = {C8A9D0B2-35E3-46C4-9921-B95CB284943E}
+		{E1C1D342-F9EE-4B2B-9CBF-77168A04275B} = {C8A9D0B2-35E3-46C4-9921-B95CB284943E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {919E15BC-6189-47B3-9370-F9E917379CF3}

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KndStore.Cart.Core\KndStore.Cart.Core.csproj" />
+    <ProjectReference Include="..\KndStore.Shared.Infra\KndStore.Shared.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

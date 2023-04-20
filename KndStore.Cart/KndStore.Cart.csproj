@@ -12,21 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KndStore.Catalog.Infra\KndStore.Catalog.Infra.csproj" />
+    <ProjectReference Include="..\KndStore.Cart.Infra\KndStore.Cart.Infra.csproj" />
     <ProjectReference Include="..\KndStore.Shared\KndStore.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Catalog\" />
-    <Folder Include="Views\Shared\Partial\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Shared\Components\NavigationMenu\Default.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Shared\Components\NavigationMenu\Default.cshtml" />
   </ItemGroup>
 
 

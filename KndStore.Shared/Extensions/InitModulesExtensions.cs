@@ -2,9 +2,10 @@
 using KndStore.Shared.Abstracts;
 
 namespace KndStore.Shared.Extensions;
+
 public static class InitModulesExtensions
 {
-    static readonly List<IModule> _registeredModules = new List<IModule>();
+    static readonly IList<IModule> _registeredModules = new List<IModule>();
 
     public static IMvcBuilder RegisterModules(this IMvcBuilder services)
     {
@@ -23,7 +24,7 @@ public static class InitModulesExtensions
             .CurrentDomain
         .GetAssemblies()
         .SelectMany(a => a.GetTypes())
-            .Where(x => x.IsClass && x.IsAssignableTo(typeof(IModule)))
+            .Where(x => x.IsAssignableTo(typeof(IModule)) && x is { IsClass: true, IsAbstract: false })
             .Select(Activator.CreateInstance)
             .Cast<IModule>();
         return modules;
