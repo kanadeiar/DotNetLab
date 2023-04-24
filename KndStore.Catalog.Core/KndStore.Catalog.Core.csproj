@@ -10,4 +10,8 @@
     <ProjectReference Include="..\KndStore.Shared.Core\KndStore.Shared.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entites\" />
+  </ItemGroup>
+
 </Project>

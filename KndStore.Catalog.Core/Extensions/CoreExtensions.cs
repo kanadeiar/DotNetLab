@@ -1,5 +1,5 @@
-﻿using KndStore.Catalog.Core.Abstracts;
-using KndStore.Catalog.Core.Sources;
+﻿using KndStore.Catalog.Core.Sources;
+using KndStore.Shared.Core.Abstracts;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace KndStore.Catalog.Core.Extensions;

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using KndStore.Shared.Core.Abstracts;
 
-namespace KndStore.Catalog.Core.Entites;
+namespace KndStore.Shared.Core.Entites;
 
 public class Product : IProduct, IEntity
 {

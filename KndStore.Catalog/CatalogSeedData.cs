@@ -1,5 +1,5 @@
-﻿using KndStore.Catalog.Core.Entites;
-using KndStore.Catalog.Infra.Data;
+﻿using KndStore.Catalog.Infra.Data;
+using KndStore.Shared.Core.Entites;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 

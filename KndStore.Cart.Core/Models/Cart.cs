@@ -1,12 +1,13 @@
 ﻿using KndStore.Cart.Core.Entites;
 using KndStore.Shared.Core.Abstracts;
+using KndStore.Shared.Core.Entites;
 
 namespace KndStore.Cart.Core.Models;
 
 public class Cart
 {
     public List<CartLine> Lines { get; set; } = new List<CartLine>();
-    public void AddItem(IProduct product, int quantity)
+    public void AddItem(Product product, int quantity)
     {
         var line = Lines.FirstOrDefault(x => x.Product?.Id == product.Id);
         if (line == null)
@@ -18,7 +19,7 @@ public class Cart
             line.Quantity += quantity;
         }
     }
-    public void RemoveLine(IProduct product)
+    public void RemoveLine(Product product)
     {
         if (Lines.FirstOrDefault(x => x.Product?.Id == product.Id) is { } line)
         {

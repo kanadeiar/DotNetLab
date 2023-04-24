@@ -1,4 +1,4 @@
-﻿using KndStore.Catalog.Core.Entites;
+﻿using KndStore.Shared.Core.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace KndStore.Catalog.Core.Abstracts;
