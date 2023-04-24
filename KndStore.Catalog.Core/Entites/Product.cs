@@ -3,7 +3,7 @@ using KndStore.Shared.Core.Abstracts;
 
 namespace KndStore.Catalog.Core.Entites;
 
-public class Product : IEntity
+public class Product : IProduct, IEntity
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;

@@ -15,7 +15,6 @@ public static class InfraExtensions
             .AddDatabaseContext<CatalogDbContext>(config)
             .AddScoped<ICatalogDbContext>(provider => 
                 provider.GetService<CatalogDbContext>() ?? throw new InvalidOperationException());
-        services.AddScoped<ICatalogRepo, CatalogRepo>();
         return services;
     }
 }

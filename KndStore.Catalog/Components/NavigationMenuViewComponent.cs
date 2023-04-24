@@ -1,4 +1,5 @@
 ﻿using KndStore.Catalog.Core.Abstracts;
+using KndStore.Shared.Core.Abstracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KndStore.Catalog.Components;

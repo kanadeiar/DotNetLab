@@ -1,5 +1,6 @@
 ﻿using KndStore.Catalog.Core.Abstracts;
 using KndStore.Catalog.Core.ViewModels;
+using KndStore.Shared.Core.Abstracts;
 using KndStore.Shared.Core.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
