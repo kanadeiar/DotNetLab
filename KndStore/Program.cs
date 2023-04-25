@@ -1,6 +1,7 @@
+using KndStore.Cart.Core.Models;
+using KndStore.Cart.Models;
 using KndStore.Catalog;
 using KndStore.Catalog.Extensions;
-using KndStore.Shared.Core.Abstracts;
 using KndStore.Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 builder.Services.AddCatalogModule(builder.Configuration);
+builder.Services.AddScoped<Cart>(SessionCart.GetCart);
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 var app = builder.Build();
 

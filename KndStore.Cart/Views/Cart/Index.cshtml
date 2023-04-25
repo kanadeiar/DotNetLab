@@ -5,10 +5,10 @@
 
     <table class="table table-bordered table-striped">
         <thead>
-        <tr><th>Item</th><th class="text-right">Price</th><th>Quantity</th><th class="text-right">Subtotal</th></tr>
+        <tr><th>Item</th><th class="text-right">Price</th><th>Quantity</th><th class="text-right">Subtotal</th><th></th></tr>
         </thead>
         <tbody>
-        @foreach (var line in Model.Cart?.Lines)
+        @foreach (var line in Model.Cart?.Lines ?? new List<CartLine>())
         {
             <tr>
                 <td class="text-center">@line.Product?.Name</td>
@@ -16,6 +16,15 @@
                 <td class="text-center">@line.Quantity</td>
                 <td class="text-right">
                     @((line.Quantity * line.Product?.Price)?.ToString("c"))
+                </td>
+                <td class="text-center">
+                    <form asp-controller="Cart" asp-action="Remove" method="post">
+                        <input type="hidden" name="Id" value="@line?.Product?.Id" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Удалить
+                        </button>
+                    </form>
                 </td>
             </tr>
         }
@@ -30,6 +39,14 @@
         </tfoot>
     </table>
 
+    <div class="text-center mb-1">
+        <form asp-controller="Cart" asp-action="Clear" method="post">
+            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+            <button type="submit" class="btn btn-danger">
+                Очистить корзину
+            </button>
+        </form>
+    </div>
     <div class="text-center">
         <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупки</a>
     </div>

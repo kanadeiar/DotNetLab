@@ -1,23 +1,23 @@
 ﻿using KndStore.Cart.Core.ViewModels;
 using KndStore.Shared.Core.Abstracts;
-using KndStore.Shared.Extensions;
 
 namespace KndStore.Cart.Controllers;
 
 public class CartController : Controller
 {
     private readonly ICatalogRepo _repo;
-    public CartController(ICatalogRepo repo)
+    private readonly Core.Models.Cart _cart;
+    public CartController(ICatalogRepo repo, Core.Models.Cart cart)
     {
         _repo = repo;
+        _cart = cart;
     }
 
     public IActionResult Index(string? returnUrl)
     {
-        var cart = HttpContext.Session.GetJson<Core.Models.Cart>("cart") ?? new Core.Models.Cart();
         var model = new CartViewModel
         {
-            Cart = cart,
+            Cart = _cart,
             ReturnUrl = returnUrl,
         };
         return View(model);
@@ -29,11 +29,27 @@ public class CartController : Controller
         var product = _repo.Query.FirstOrDefault(x => x.Id == id);
         if (product is { })
         {
-            var cart = HttpContext.Session.GetJson<Core.Models.Cart>("cart") ?? new Core.Models.Cart();
-            cart.AddItem(product, 1);
-            HttpContext.Session.SetJson("cart", cart);
+            _cart.AddItem(product, 1);
         }
-        return RedirectToAction("Index", "Cart", new { returnUrl = returnUrl });
+        return RedirectToAction("Index", "Cart", new { returnUrl });
+    }
+
+    [HttpPost]
+    public IActionResult Remove(int id, string? returnUrl)
+    {
+        var product = _repo.Query.FirstOrDefault(x => x.Id == id);
+        if (product is { })
+        {
+            _cart.RemoveLine(product);
+        }
+        return RedirectToAction("Index", "Cart", new { returnUrl });
+    }
+
+    [HttpPost]
+    public IActionResult Clear(string? returnUrl)
+    {
+        _cart.Clear();
+        return RedirectToAction("Index", "Cart", new { returnUrl });
     }
 }
 
