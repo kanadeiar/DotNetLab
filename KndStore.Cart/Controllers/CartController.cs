@@ -1,13 +1,13 @@
-﻿using KndStore.Cart.Core.ViewModels;
+﻿using KndStore.Cart.Core.WebModels;
 using KndStore.Shared.Core.Abstracts;
 
 namespace KndStore.Cart.Controllers;
 
 public class CartController : Controller
 {
-    private readonly ICatalogRepo _repo;
+    private readonly IRepo<IProduct> _repo;
     private readonly Core.Models.Cart _cart;
-    public CartController(ICatalogRepo repo, Core.Models.Cart cart)
+    public CartController(IRepo<IProduct> repo, Core.Models.Cart cart)
     {
         _repo = repo;
         _cart = cart;
@@ -15,8 +15,20 @@ public class CartController : Controller
 
     public IActionResult Index(string? returnUrl)
     {
-        var model = new CartViewModel
+        var products = _cart.Lines.Select(x =>
         {
+            var product = _repo.Query.First(p => p.Id == x.ProductId);
+            return new ProductWebModel
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                Quantity = x.Quantity,
+            };
+        });
+        var model = new CartWebModel
+        {
+            Products = products,
             Cart = _cart,
             ReturnUrl = returnUrl,
         };
@@ -29,7 +41,7 @@ public class CartController : Controller
         var product = _repo.Query.FirstOrDefault(x => x.Id == id);
         if (product is { })
         {
-            _cart.AddItem(product, 1);
+            _cart.AddItem(product.Id, 1);
         }
         return RedirectToAction("Index", "Cart", new { returnUrl });
     }
@@ -40,7 +52,7 @@ public class CartController : Controller
         var product = _repo.Query.FirstOrDefault(x => x.Id == id);
         if (product is { })
         {
-            _cart.RemoveLine(product);
+            _cart.RemoveLine(product.Id);
         }
         return RedirectToAction("Index", "Cart", new { returnUrl });
     }

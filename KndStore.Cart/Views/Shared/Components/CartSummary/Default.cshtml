@@ -1,10 +1,10 @@
-﻿@model Cart
+﻿@model KndStore.Cart.Core.WebModels.CartWebModel
 
-@if (Model.Lines.Any())
+@if (Model.Products.Any())
 {
     <small class="navbar-text">
         <b>Корзина:</b>
-        @Model.Lines.Sum(x => x.Quantity) ед.
+        @Model.Products.Sum(x => x.Quantity) ед.
         @Model.ComputeTotalSum().ToString("c")
     </small>
 }

@@ -1,25 +1,26 @@
-﻿@model CartViewModel
+﻿@using KndStore.Cart.Core.WebModels
+@model KndStore.Cart.Core.WebModels.CartWebModel
 
 <div>
     <h4>Корзина</h4>
 
     <table class="table table-bordered table-striped">
         <thead>
-        <tr><th>Item</th><th class="text-right">Price</th><th>Quantity</th><th class="text-right">Subtotal</th><th></th></tr>
+        <tr><th>Item</th><th class="text-right">Price</th>@*<th>Quantity</th><th class="text-right">Subtotal</th>*@<th></th></tr>
         </thead>
         <tbody>
-        @foreach (var line in Model.Cart?.Lines ?? new List<CartLine>())
+        @foreach (var line in Model.Products ?? new List<ProductWebModel>())
         {
             <tr>
-                <td class="text-center">@line.Product?.Name</td>
-                <td class="text-right">@line.Product?.Price.ToString("c")</td>
+                <td class="text-center">@line.Name</td>
+                <td class="text-right">@line.Price.ToString("c")</td>
                 <td class="text-center">@line.Quantity</td>
                 <td class="text-right">
-                    @((line.Quantity * line.Product?.Price)?.ToString("c"))
+                    @((line.Quantity * line?.Price)?.ToString("c"))
                 </td>
                 <td class="text-center">
                     <form asp-controller="Cart" asp-action="Remove" method="post">
-                        <input type="hidden" name="Id" value="@line?.Product?.Id" />
+                        <input type="hidden" name="Id" value="@line?.Id" />
                         <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
                         <button type="submit" class="btn btn-sm btn-danger">
                             Удалить
@@ -33,7 +34,7 @@
         <tr>
             <td colspan="3" class="text-center">Total:</td>
             <td class="text-right">
-                @Model.Cart?.ComputeTotalSum().ToString("c")
+                @Model.ComputeTotalSum().ToString("c")
             </td>
         </tr>
         </tfoot>

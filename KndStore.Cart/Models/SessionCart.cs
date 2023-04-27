@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using KndStore.Shared.Core.Entites;
+using KndStore.Shared.Core.Abstracts;
 using KndStore.Shared.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,14 +18,14 @@ public class SessionCart : Core.Models.Cart
         cart.Session = session;
         return cart;
     }
-    public override void AddItem(Product product, int quantity)
+    public override void AddItem(int productId, int quantity)
     {
-        base.AddItem(product, quantity);
+        base.AddItem(productId, quantity);
         Session?.SetJson("cart", this);
     }
-    public override void RemoveLine(Product product)
+    public override void RemoveLine(int productId)
     {
-        base.RemoveLine(product);
+        base.RemoveLine(productId);
         Session?.SetJson("cart", this);
     }
     public override void Clear()

@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KndStore.Shared.Core\KndStore.Shared.Core.csproj" />
+    <Compile Remove="Abstracts\**" />
+    <EmbeddedResource Remove="Abstracts\**" />
+    <None Remove="Abstracts\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstracts\" />
+    <ProjectReference Include="..\KndStore.Shared.Core\KndStore.Shared.Core.csproj" />
   </ItemGroup>
 
 </Project>

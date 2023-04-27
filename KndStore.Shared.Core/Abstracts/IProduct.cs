@@ -2,9 +2,8 @@
 
 namespace KndStore.Shared.Core.Abstracts;
 
-public interface IProduct
+public interface IProduct : IEntity
 {
-    public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public string Category { get; set; }

@@ -1,6 +1,6 @@
 ﻿using KndStore.Catalog.Core.Abstracts;
+using KndStore.Catalog.Core.Entites;
 using KndStore.Shared.Core.Abstracts;
-using KndStore.Shared.Core.Entites;
 
 namespace KndStore.Catalog.Core.Sources;
 
