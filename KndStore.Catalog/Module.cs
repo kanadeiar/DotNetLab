@@ -2,7 +2,7 @@
 
 namespace KndStore.Catalog;
 
-public class Module : Module<Module>
+public class Module : AModule<Module>
 {
 }
 

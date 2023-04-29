@@ -1,4 +1,4 @@
-﻿using KndStore.Shared.Core.ViewModels;
+﻿using KndStore.Shared.Core.WebModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;

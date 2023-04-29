@@ -1,7 +1,7 @@
-﻿using KndStore.Cart.Core.WebModels;
-using KndStore.Shared.Core.Abstracts;
+﻿using KndStore.Shared.Core.Abstracts;
+using KndStore.ShopCart.Core.WebModels;
 
-namespace KndStore.Cart.Controllers;
+namespace KndStore.ShopCart.Controllers;
 
 public class CartController : Controller
 {

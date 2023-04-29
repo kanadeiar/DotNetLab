@@ -2,7 +2,7 @@
 
 namespace KndStore.Shared.Abstracts;
 
-public abstract class Module<T> : IModule where T : IModule
+public abstract class AModule<T> : IModule where T : IModule
 {
     public IMvcBuilder RegisterModule(IMvcBuilder builder)
     {

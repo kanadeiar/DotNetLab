@@ -1,5 +1,4 @@
-﻿@using KndStore.Cart.Core.WebModels
-@model KndStore.Cart.Core.WebModels.CartWebModel
+﻿@model CartWebModel
 
 <div>
     <h4>Корзина</h4>
@@ -9,7 +8,7 @@
         <tr><th>Item</th><th class="text-right">Price</th>@*<th>Quantity</th><th class="text-right">Subtotal</th>*@<th></th></tr>
         </thead>
         <tbody>
-        @foreach (var line in Model.Products ?? new List<ProductWebModel>())
+        @foreach (var line in Model.Products)
         {
             <tr>
                 <td class="text-center">@line.Name</td>

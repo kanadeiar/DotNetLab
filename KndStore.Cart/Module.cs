@@ -2,7 +2,7 @@
 
 namespace KndStore.Cart;
 
-public class Module : Module<Module>
+public class Module : AModule<Module>
 {
 }
 

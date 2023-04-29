@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace KndStore.Cart.Core.WebModels;
+namespace KndStore.ShopCart.Core.WebModels;
 
 public class ProductWebModel
 {

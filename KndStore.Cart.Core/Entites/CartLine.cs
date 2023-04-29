@@ -1,6 +1,6 @@
 ﻿using KndStore.Shared.Core.Abstracts;
 
-namespace KndStore.Cart.Core.Entites;
+namespace KndStore.ShopCart.Core.Entites;
 
 public class CartLine : IEntity
 {

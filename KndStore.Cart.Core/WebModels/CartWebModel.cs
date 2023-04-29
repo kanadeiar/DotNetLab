@@ -1,10 +1,10 @@
-﻿using KndStore.Shared.Core.Abstracts;
+﻿using KndStore.ShopCart.Core.Models;
 
-namespace KndStore.Cart.Core.WebModels;
+namespace KndStore.ShopCart.Core.WebModels;
 
 public class CartWebModel
 {
-    public Models.Cart? Cart { get; set; }
+    public Cart? Cart { get; set; }
     public IEnumerable<ProductWebModel> Products { get; set; } = Enumerable.Empty<ProductWebModel>();
     public string? ReturnUrl { get; set; }
     public decimal ComputeTotalSum()

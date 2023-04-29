@@ -23,13 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Shared.Core", "Knd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Shared.Infra", "KndStore.Shared.Infra\KndStore.Shared.Infra.csproj", "{DB769850-56EC-4F15-A17E-D21C9D73E9A4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cart", "Cart", "{C8A9D0B2-35E3-46C4-9921-B95CB284943E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopCart", "ShopCart", "{C8A9D0B2-35E3-46C4-9921-B95CB284943E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Cart", "KndStore.Cart\KndStore.Cart.csproj", "{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.ShopCart", "KndStore.Cart\KndStore.ShopCart.csproj", "{8EBEA538-DAF2-46C3-B3F5-96179EFD652D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Cart.Core", "KndStore.Cart.Core\KndStore.Cart.Core.csproj", "{5525307D-6E42-42DD-A91C-C2CDF439EBF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.ShopCart.Core", "KndStore.Cart.Core\KndStore.ShopCart.Core.csproj", "{5525307D-6E42-42DD-A91C-C2CDF439EBF9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.Cart.Infra", "KndStore.Cart.Infra\KndStore.Cart.Infra.csproj", "{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KndStore.ShopCart.Infra", "KndStore.Cart.Infra\KndStore.ShopCart.Infra.csproj", "{E1C1D342-F9EE-4B2B-9CBF-77168A04275B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{27BDB257-0C6A-40DC-B38A-6CC93CCB48C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

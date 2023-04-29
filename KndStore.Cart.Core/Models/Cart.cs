@@ -1,7 +1,6 @@
-﻿using KndStore.Cart.Core.Entites;
-using KndStore.Shared.Core.Abstracts;
+﻿using KndStore.ShopCart.Core.Entites;
 
-namespace KndStore.Cart.Core.Models;
+namespace KndStore.ShopCart.Core.Models;
 
 public class Cart
 {

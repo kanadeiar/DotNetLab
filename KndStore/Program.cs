@@ -1,8 +1,8 @@
-using KndStore.Cart.Core.Models;
-using KndStore.Cart.Models;
 using KndStore.Catalog;
 using KndStore.Catalog.Extensions;
 using KndStore.Shared.Extensions;
+using KndStore.ShopCart.Core.Models;
+using KndStore.ShopCart.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

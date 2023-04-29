@@ -1,13 +1,13 @@
-﻿using KndStore.Cart.Core.WebModels;
-using KndStore.Shared.Core.Abstracts;
+﻿using KndStore.Shared.Core.Abstracts;
+using KndStore.ShopCart.Core.WebModels;
 
-namespace KndStore.Cart.Components;
+namespace KndStore.ShopCart.Components;
 
 public class CartSummaryViewComponent : ViewComponent
 {
     private readonly IRepo<IProduct> _repo;
-    private readonly Core.Models.Cart _cart;
-    public CartSummaryViewComponent(IRepo<IProduct> repo, Core.Models.Cart cart)
+    private readonly ShopCart.Core.Models.Cart _cart;
+    public CartSummaryViewComponent(IRepo<IProduct> repo, ShopCart.Core.Models.Cart cart)
     {
         _repo = repo;
         _cart = cart;

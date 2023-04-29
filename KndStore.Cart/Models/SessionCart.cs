@@ -1,11 +1,9 @@
 ﻿using System.Text.Json.Serialization;
-using KndStore.Shared.Core.Abstracts;
 using KndStore.Shared.Extensions;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KndStore.Cart.Models;
+namespace KndStore.ShopCart.Models;
 
 public class SessionCart : Core.Models.Cart
 {

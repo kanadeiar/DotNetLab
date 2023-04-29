@@ -1,5 +1,5 @@
 ﻿using KndStore.Shared.Core.Abstracts;
-using KndStore.Shared.Core.ViewModels;
+using KndStore.Shared.Core.WebModels;
 
 namespace KndStore.Catalog.Core.ViewModels;
 

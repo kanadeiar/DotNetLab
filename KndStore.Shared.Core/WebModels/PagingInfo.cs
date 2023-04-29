@@ -1,4 +1,4 @@
-﻿namespace KndStore.Shared.Core.ViewModels;
+﻿namespace KndStore.Shared.Core.WebModels;
 
 public class PagingInfo
 {

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KndStore.Cart.Infra\KndStore.Cart.Infra.csproj" />
+    <ProjectReference Include="..\KndStore.Cart.Infra\KndStore.ShopCart.Infra.csproj" />
     <ProjectReference Include="..\KndStore.Shared\KndStore.Shared.csproj" />
   </ItemGroup>
 
