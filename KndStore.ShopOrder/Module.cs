@@ -1,8 +1,7 @@
 ﻿using KndStore.Shared.Abstracts;
 
-namespace KndStore.ShopCart;
+namespace KndStore.ShopOrder;
 
 public class Module : AModule<Module>
 {
 }
-
