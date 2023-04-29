@@ -11,7 +11,8 @@ public class CatalogDbContext : SharedDbContext, ICatalogDbContext
 {
     protected override string Schema => "Catalog";
     public DbSet<Product> Products => Set<Product>();
-    public CatalogDbContext(DbContextOptions options) : base(options)
+
+    public CatalogDbContext(DbContextOptions<CatalogDbContext> options) : base(options)
     {
     }
 }

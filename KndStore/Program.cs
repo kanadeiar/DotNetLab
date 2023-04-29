@@ -3,6 +3,7 @@ using KndStore.Catalog.Extensions;
 using KndStore.Shared.Extensions;
 using KndStore.ShopCart.Core.Models;
 using KndStore.ShopCart.Models;
+using KndStore.ShopOrder.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 builder.Services.AddCatalogModule(builder.Configuration);
+builder.Services.AddShopOrderModule(builder.Configuration);
 builder.Services.AddScoped<Cart>(SessionCart.GetCart);
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
