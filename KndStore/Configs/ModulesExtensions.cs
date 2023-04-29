@@ -1,0 +1,17 @@
+﻿using KndStore.Catalog.Configs;
+using KndStore.ShopCart.Confgis;
+using KndStore.ShopOrder.Configs;
+
+namespace KndStore.Configs;
+
+public static class ModulesExtensions
+{
+    public static IServiceCollection AddModules(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddCatalogModule(configuration);
+        services.AddShopOrderModule(configuration);
+        services.AddShopCartModule(configuration);
+        return services;
+    }
+}
+

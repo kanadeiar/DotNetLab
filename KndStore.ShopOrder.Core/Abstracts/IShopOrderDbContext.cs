@@ -6,6 +6,8 @@ namespace KndStore.ShopOrder.Core.Abstracts;
 public interface IShopOrderDbContext
 {
     public DbSet<Order> Orders { get; }
-    Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+    DbSet<OrderLine> OrderLines { get; }
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = new ());
+    int SaveChanges();
 }
 

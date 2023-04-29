@@ -14,13 +14,16 @@ public class ShopOrderRepo : IShopOrderRepo
 
     public IQueryable<Order> Orders => _context.Orders
         .Include(x => x.Lines);
-    public async Task AddOrder(Order order)
+    public void AddOrder(Order order)
     {
+        _context.OrderLines.AddRange(order.Lines);
+        _context.SaveChanges();
+
         if (order.Id == 0)
         {
             _context.Orders.Add(order);
         }
-        await _context.SaveChangesAsync(new CancellationToken());
+        _context.SaveChanges();
     }
 }
 

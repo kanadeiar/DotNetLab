@@ -1,11 +1,10 @@
 ﻿using KndStore.Catalog.Core.Abstracts;
-using KndStore.Catalog.Core.Sources;
 using KndStore.Catalog.Infra.Data;
+using KndStore.Shared.Infra.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using KndStore.Shared.Infra.Extensions;
 
-namespace KndStore.Catalog.Infra.Extensions;
+namespace KndStore.Catalog.Infra.Configs;
 
 public static class InfraExtensions
 {

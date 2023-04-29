@@ -3,7 +3,7 @@ using KndStore.Catalog.Core.Sources;
 using KndStore.Shared.Core.Abstracts;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KndStore.Catalog.Core.Extensions;
+namespace KndStore.Catalog.Core.Configs;
 
 public static class CoreExtensions
 {

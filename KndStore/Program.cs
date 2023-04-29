@@ -1,20 +1,18 @@
 using KndStore.Catalog;
-using KndStore.Catalog.Extensions;
+using KndStore.Configs;
 using KndStore.Shared.Extensions;
-using KndStore.ShopCart.Extensions;
-using KndStore.ShopOrder.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().RegisterModules();
 builder.Services.AddRazorPages();
+
+
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
-builder.Services.AddCatalogModule(builder.Configuration);
-builder.Services.AddShopOrderModule(builder.Configuration);
-builder.Services.AddShopCartModule(builder.Configuration);
-
+builder.Services.AddModules(builder.Configuration);
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
 var app = builder.Build();
 
@@ -35,6 +33,7 @@ app.UseRouting();
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();
+
 
 CatalogSeedData.EnsurePopulated(app);
 

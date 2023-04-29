@@ -36,7 +36,7 @@ namespace KndStore.ShopOrder.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderLine",
+                name: "OrderLines",
                 schema: "ShopOrder",
                 columns: table => new
                 {
@@ -48,9 +48,9 @@ namespace KndStore.ShopOrder.Infra.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderLine", x => x.Id);
+                    table.PrimaryKey("PK_OrderLines", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OrderLine_Orders_OrderId",
+                        name: "FK_OrderLines_Orders_OrderId",
                         column: x => x.OrderId,
                         principalSchema: "ShopOrder",
                         principalTable: "Orders",
@@ -58,9 +58,9 @@ namespace KndStore.ShopOrder.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderLine_OrderId",
+                name: "IX_OrderLines_OrderId",
                 schema: "ShopOrder",
-                table: "OrderLine",
+                table: "OrderLines",
                 column: "OrderId");
         }
 
@@ -68,7 +68,7 @@ namespace KndStore.ShopOrder.Infra.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrderLine",
+                name: "OrderLines",
                 schema: "ShopOrder");
 
             migrationBuilder.DropTable(

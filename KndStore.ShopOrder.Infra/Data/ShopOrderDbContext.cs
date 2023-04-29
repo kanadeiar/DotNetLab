@@ -11,10 +11,9 @@ public class ShopOrderDbContext : SharedDbContext, IShopOrderDbContext
 {
     protected override string Schema => "ShopOrder";
     public DbSet<Order> Orders => Set<Order>();
+    public DbSet<OrderLine> OrderLines => Set<OrderLine>();
 
     public ShopOrderDbContext(DbContextOptions<ShopOrderDbContext> options) : base(options)
     {
     }
-
-
 }

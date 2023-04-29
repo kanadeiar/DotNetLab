@@ -2,7 +2,7 @@
 
 namespace KndStore.ShopCart.Core.Entites;
 
-public class CartLine : IEntity
+public class CartLine : ICartLine
 {
     public int Id { get; set; }
     public int ProductId { get; set; }

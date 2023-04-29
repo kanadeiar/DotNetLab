@@ -1,10 +1,11 @@
-﻿using KndStore.ShopCart.Core.Entites;
+﻿using KndStore.Shared.Core.Abstracts;
+using KndStore.ShopCart.Core.Entites;
 
 namespace KndStore.ShopCart.Core.Models;
 
-public class Cart
+public class Cart : ISharedCart
 {
-    public List<CartLine> Lines { get; set; } = new();
+    public IList<CartLine> Lines { get; set; } = new List<CartLine>();
     public virtual void AddItem(int productId, int quantity)
     {
         var line = Lines.FirstOrDefault(x => x.ProductId == productId);
@@ -27,5 +28,6 @@ public class Cart
     }
 
     public virtual void Clear() => Lines.Clear();
+    public IEnumerable<ICartLine> GetLines() => Lines;
 }
 

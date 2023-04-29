@@ -89,7 +89,7 @@ namespace KndStore.ShopOrder.Infra.Data.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderLine", "ShopOrder");
+                    b.ToTable("OrderLines", "ShopOrder");
                 });
 
             modelBuilder.Entity("KndStore.ShopOrder.Core.Entites.OrderLine", b =>

@@ -1,9 +1,9 @@
-﻿using KndStore.ShopOrder.Core.Extensions;
-using KndStore.ShopOrder.Infra.Extensions;
+﻿using KndStore.ShopOrder.Core.Configs;
+using KndStore.ShopOrder.Infra.Configs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KndStore.ShopOrder.Extensions;
+namespace KndStore.ShopOrder.Configs;
 
 public static class ModuleExtensions
 {

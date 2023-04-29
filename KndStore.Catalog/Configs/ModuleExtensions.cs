@@ -1,9 +1,9 @@
-﻿using KndStore.Catalog.Core.Extensions;
+﻿using KndStore.Catalog.Core.Configs;
+using KndStore.Catalog.Infra.Configs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using KndStore.Catalog.Infra.Extensions;
 
-namespace KndStore.Catalog.Extensions;
+namespace KndStore.Catalog.Configs;
 
 public static class ModuleExtensions
 {

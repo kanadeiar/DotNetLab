@@ -1,11 +1,10 @@
 ﻿using KndStore.Shared.Infra.Extensions;
 using KndStore.ShopOrder.Core.Abstracts;
-using KndStore.ShopOrder.Core.Sources;
 using KndStore.ShopOrder.Infra.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KndStore.ShopOrder.Infra.Extensions;
+namespace KndStore.ShopOrder.Infra.Configs;
 
 public static class InfraExtensions
 {
