@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().RegisterModules();
 builder.Services.AddRazorPages();
-
+builder.Services.AddServerSideBlazor();
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
@@ -33,7 +33,8 @@ app.UseRouting();
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();
-
+app.MapBlazorHub();
+app.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
 
 CatalogSeedData.EnsurePopulated(app);
 

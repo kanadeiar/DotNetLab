@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KndStore.Admin\KndStore.Admin.csproj" />
     <ProjectReference Include="..\KndStore.Cart\KndStore.ShopCart.csproj" />
     <ProjectReference Include="..\KndStore.Catalog\KndStore.Catalog.csproj" />
     <ProjectReference Include="..\KndStore.Shared\KndStore.Shared.csproj" />
