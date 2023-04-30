@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KndStore.Catalog\KndStore.Catalog.csproj" />
     <ProjectReference Include="..\KndStore.Shared\KndStore.Shared.csproj" />
     <ProjectReference Include="..\KndStore.ShopOrder\KndStore.ShopOrder.csproj" />
   </ItemGroup>
