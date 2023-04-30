@@ -6,4 +6,5 @@ public interface IShopOrderRepo
 {
     IQueryable<Order> Orders { get; }
     void AddOrder(Order order);
+    void UpdateOrder(Order order);
 }

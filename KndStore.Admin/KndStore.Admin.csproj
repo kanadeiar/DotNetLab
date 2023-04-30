@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KndStore.Shared\KndStore.Shared.csproj" />
+    <ProjectReference Include="..\KndStore.ShopOrder\KndStore.ShopOrder.csproj" />
   </ItemGroup>
 
 

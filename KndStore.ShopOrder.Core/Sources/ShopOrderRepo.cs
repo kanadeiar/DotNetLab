@@ -25,5 +25,10 @@ public class ShopOrderRepo : IShopOrderRepo
         }
         _context.SaveChanges();
     }
+
+    public void UpdateOrder(Order order)
+    {
+        _context.SaveChanges();
+    }
 }
 

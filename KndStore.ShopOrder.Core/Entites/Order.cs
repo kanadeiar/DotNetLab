@@ -21,4 +21,5 @@ public class Order : IEntity
     public string? Country { get; set; }
     public string? Zip { get; set; }
     public bool GiftWrap { get; set; }
+    public bool IsShipped { get; set; }
 }
