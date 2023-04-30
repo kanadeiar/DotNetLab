@@ -10,7 +10,8 @@ public static class CoreExtensions
     public static IServiceCollection AddCatalogCore(this IServiceCollection services)
     {
         services.AddScoped<ICatalogRepo, CatalogRepo>();
-        services.AddScoped<IRepo<IProduct>, CatalogRepo>();
+        services.AddScoped<IRepo<IProduct>>(provider => 
+            provider.GetRequiredService<ICatalogRepo>() ?? throw new InvalidOperationException());
         return services;
     }
 }

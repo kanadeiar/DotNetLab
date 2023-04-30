@@ -1,5 +1,6 @@
 ﻿using KndStore.Catalog.Configs;
-using KndStore.ShopCart.Confgis;
+using KndStore.ShopAccount.Configs;
+using KndStore.ShopCart.Configs;
 using KndStore.ShopOrder.Configs;
 
 namespace KndStore.Configs;
@@ -11,6 +12,7 @@ public static class ModulesExtensions
         services.AddCatalogModule(configuration);
         services.AddShopOrderModule(configuration);
         services.AddShopCartModule(configuration);
+        services.AddShopAccountModule(configuration);
         return services;
     }
 }
