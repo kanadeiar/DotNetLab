@@ -1,11 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace KndStore.Shared.Infra.Data;
 
-public abstract class SharedDbContext : DbContext
+public abstract class AIdentityDbContext : IdentityDbContext<IdentityUser>
 {
     protected abstract string Schema { get; }
-    protected SharedDbContext(DbContextOptions options) : base(options)
+    protected AIdentityDbContext(DbContextOptions options) : base(options)
     {
     }
 
@@ -23,4 +25,3 @@ public abstract class SharedDbContext : DbContext
         return (await base.SaveChangesAsync(true, cancellationToken));
     }
 }
-

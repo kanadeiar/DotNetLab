@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KndStore.ShopOrder.Infra.Data;
 
-public class ShopOrderDbContext : SharedDbContext, IShopOrderDbContext
+public class ShopOrderDbContext : ASharedDbContext, IShopOrderDbContext
 {
     protected override string Schema => "ShopOrder";
     public DbSet<Order> Orders => Set<Order>();

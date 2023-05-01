@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KndStore.Catalog.Infra.Data;
 
-public class CatalogDbContext : SharedDbContext, ICatalogDbContext
+public class CatalogDbContext : ASharedDbContext, ICatalogDbContext
 {
     protected override string Schema => "Catalog";
     public DbSet<Product> Products => Set<Product>();
