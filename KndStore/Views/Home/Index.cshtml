@@ -1,0 +1,48 @@
+﻿
+
+<div id="categories" class="col-3">
+    <vc:navigation-menu category="null" />
+</div>
+
+<div class="col-9">
+    <h4>Первая страница интернет-магазина</h4>
+    
+    <div>
+        <a href="/admin" class="btn btn-outline-secondary mb-2">
+            Админка
+        </a>
+        <a asp-page="/Admin/IdentityInfo" class="btn btn-outline-secondary mb-2">
+            Аккаунт
+        </a>
+    </div>
+  
+    <div>
+        <a asp-controller="Catalog" asp-action="Index" class="btn btn-outline-secondary mb-2">
+            Перейти в каталог
+        </a>
+        <a asp-page="/BasePage" class="btn btn-outline-secondary mb-2">
+            Страница базовая
+        </a>
+        <a asp-page="/CatalogPage" class="btn btn-outline-secondary mb-2">
+            Страница каталога товаров
+        </a>
+        <a asp-page="/CartPage" class="btn btn-outline-secondary mb-2">
+            Страница корзины товаров
+        </a>
+        <a asp-page="/OrderPage" class="btn btn-outline-secondary mb-2">
+            Страница заказов
+        </a>
+        <a asp-page="/AdminPage" class="btn btn-outline-secondary mb-2">
+            Страница админки
+        </a>
+        <a asp-page="/AccountPage" class="btn btn-outline-secondary mb-2">
+            Страница аккаунта
+        </a>
+        <a asp-page="/SharedPage" class="btn btn-outline-secondary mb-2">
+            Страница общая
+        </a>
+    </div>
+
+</div>
+
+
